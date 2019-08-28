@@ -2,18 +2,32 @@
 !*/
 layout/
 
-!/.gitignore
+# dependencies
+/node_modules
 
+# testing
+/coverage
+
+# production
+/build
+
+# configurations
+!/.gitignore
+!/package.json
+!/.webpack.config.js
+!/.babelrc
+
+# assets
 !*.html
 !*.css
 !*.js
 !*.md
-#Images
+#images
 !*.svg
 !*.png
 !*.jpg
 !*.jpeg
-#Fonts
+#fonts
 !*.woff
 !*.woff2
 !*.ttf
