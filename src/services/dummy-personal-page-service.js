@@ -1,4 +1,4 @@
-export default class DummyPortfolioService {
+export default class DummyPersonalPageService {
 	data = [
 			{
 				id: 1,
@@ -30,12 +30,12 @@ export default class DummyPortfolioService {
 	getWorks() {
 		return new Promise((resolve, reject) => {
 			setTimeout(() => {
-				console.log('Promise :: setTimeout')
+				console.log('DummyPersonalPageService::getWorks()::Promise::setTimeout()')
 				if (Math.random() > 0.25) {
 					resolve(this.data)
 				}
 				else {
-					reject(new Error('DummyPortfolioService :: getWorks() :: Timeout'))
+					reject(new Error('DummyPersonalPageService::getWorks()::setTimeout()::reject'))
 				}
 			}, 700)
 		})

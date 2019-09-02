@@ -2,7 +2,7 @@ import React from 'react'
 
 import './page-header.css'
 
-const PageHeader = (props) => {
+const PageHeader = () => {
 	return (
 		<header className="page-header">tagHeader</header>
 	)

@@ -1,22 +1,20 @@
-import React, { Fragment, useState } from 'react'
-
-import DummyPortfolioService from '../../services/dummy-portfolio-service'
-import { PortfolioServiceProvider } from '../portfolio-service-context'
+import React, { Fragment } from 'react'
+import { Route, Switch, Redirect } from 'react-router-dom'
 
 import PageHeader from '../page-header'
-import { HomePage } from '../pages'
+import { HomePage, PortfolioPage } from '../pages'
 
 const App = () => {
-	/* Try use React.hooks */
-	const [portfolioService, setPortfolioService] = useState(new DummyPortfolioService())
-	const service = portfolioService
-	 	
+
 	return (
 		<Fragment>
 			<PageHeader />
-			<PortfolioServiceProvider value={service}>
-				<HomePage />
-			</PortfolioServiceProvider>
+			<Switch>
+				<Route path="/" component={HomePage} exact={true} />
+				<Route path="/portfolio" component={PortfolioPage} exact={true} />
+				
+				<Redirect to="/" />
+			</Switch>
 		</Fragment>
 	)
 }
