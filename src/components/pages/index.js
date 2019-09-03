@@ -1,7 +1,7 @@
 import HomePage from './home-page'
-import Portfolio from './portfolio-page'
+import PortfolioPage from './portfolio-page'
 
 export {
 	HomePage,
-	Portfolio
+	PortfolioPage
 }

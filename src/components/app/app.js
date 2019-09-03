@@ -10,7 +10,7 @@ const App = () => {
 		<Fragment>
 			<PageHeader />
 			<Switch>
-				<Route path="/" component={HomePage} exact={true} />
+				<Route path="/" component={PortfolioPage} exact={true} />
 				<Route path="/portfolio" component={PortfolioPage} exact={true} />
 				
 				<Redirect to="/" />

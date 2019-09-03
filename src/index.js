@@ -13,7 +13,7 @@ const personalPageService = new DummyPersonalPageService()
 
 ReactDOM.render(
 	<ErrorBoundary>
-		<PersonalPageServiceProvider value="personalPageService">
+		<PersonalPageServiceProvider value={personalPageService}>
 			<Router>
 				<App />
 			</Router>
