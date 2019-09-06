@@ -1,3 +1,94 @@
 .page-header {
-	background-color: tomato;
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-start;
+	align-items: center;
+	margin: 0 auto;
+	padding: 20px 25px;
+
+	font-size: 16px;
+	line-height: 18px;
+	font-weight: normal;
+
+	background-color: whitesmoke;
+}
+
+.header-logo {
+	display: block;
+
+	align-self: center;
+
+	margin: 0 200px 0px 50px;
+	padding: 10px 15px;
+
+	border: 2px solid darkgray;
+	border-radius: 2px;
+
+	text-align: center;
+}
+
+.header-logo__title {
+	display: block;
+	margin: 0;
+	padding: 0;
+
+	font-size: 18px;
+	line-height: 24px;
+	font-weight: normal;
+	text-decoration: underline;
+}
+
+.header-logo__description {
+	display: block;
+	margin: 0;
+	padding: 0;
+
+	font-size: 16px;
+	line-height: 18px;
+	font-weight: normal;
+}
+
+.header-navigation {
+}
+
+.main-navigation {
+	display: flex;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+.main-navigation--row {
+	flex-direction: row;
+	flex-wrap: nowrap;
+
+	padding-right: 5px;
+	padding-left: 5px;
+}
+
+.main-navigation__item {
+	display: flex;
+	background-color: whitesmoke;
+}
+
+.main-navigation--row .main-navigation__item {
+	margin-right: 5px;
+}
+
+.main-navigation--row .main-navigation__item:last-child {
+	margin-right: 0;
+}
+
+.main-navigation__link {
+	padding: 10px 15px;
+
+	background-color: lavender;
+	border: 2px solid cornflowerblue;
+	border-radius: 2px;
+
+	font-size: 18px;
+	line-height: 24px;
+	font-weight: normal;
+
+	text-decoration: none;
 }

@@ -4,9 +4,12 @@ import { Route, Switch, Redirect } from 'react-router-dom'
 import PageHeader from '../page-header'
 import { HomePage, PortfolioPage } from '../pages'
 
+import './app.css'
+
 const App = () => {
 
 	return (
+		<div className="app">
 		<Fragment>
 			<PageHeader />
 			<Switch>
@@ -16,6 +19,7 @@ const App = () => {
 				<Redirect to="/" />
 			</Switch>
 		</Fragment>
+		</div>
 	)
 }
 

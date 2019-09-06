@@ -13,10 +13,12 @@ import ErrorBoundary from '../error-boundary'
 const PortfolioListItem = ({ title, description, link}) => {
 	return (
 		<li className="portfolio-item">
-			<h3>{title}</h3></a>
+			<h3 className="portfolio-title">{title}</h3>
 			<p className="portfolio-description">{description}</p>
-			<a className="button portfolio-link--overview" href={link}>Обзор</a>
-			<a className="button portfolio-link--details" href={link}>Подробнее</a>
+			<div className="portfolio-group--bottom">
+				<a className="portfolio-link" href={link} target="_blank">Открыть</a>
+				<button className="portfolio-details">Подробнее</button>
+			</div>
 		</li>
 	)
 }
@@ -55,7 +57,11 @@ const PortfolioPage = () => {
 		case 'REQUEST':
 			return (<LoadingIndicator />)
 		case 'SUCCESS':
-			return (<PortfolioList items={portfolio} />)
+			return (
+				<section className="portfolio-section">
+					<PortfolioList items={portfolio} />
+				</section>
+			)
 		case 'FAILURE':
 			return <ErrorIndicator />
 	}
